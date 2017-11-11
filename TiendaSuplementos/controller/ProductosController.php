@@ -22,12 +22,18 @@ class ProductosController extends Controller
     $productos=$this->model->getProductos();
     $this->view->mostrarProductos($productos,$categorias);
   }
+  public function index()
+  {
+    $categorias=$this->modelcategorias->getCategorias();
+    $productos=$this->model->getProductos();
+    $this->view->mostrarIndex($productos,$categorias);
+  }
   function filtrarCategoria() {
     if (isset($_POST['filtrar'])) {
       $categoriaFiltrada = $_POST['filtrar'];
       $categorias=$this->modelcategorias->getCategorias();
       $productos=$this->model->getProductos();
-      $this->view->productosFiltradosAdmin($categorias,$productos,$categoriaFiltrada);
+      $this->view->productosFiltrados($categorias,$productos,$categoriaFiltrada);
     }
   }
   public function proteinas(){

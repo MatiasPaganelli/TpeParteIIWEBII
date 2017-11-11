@@ -51,4 +51,35 @@ $(document).ready(function(){
       }
     });
   });
+  $(".index").on("click",function(){
+    $.ajax({
+      "url":"index",
+      "method":"GET",
+      "dataType":"HTML",
+      "success": function(data) {
+        $(".container").html(data);
+      }
+    });
+  });
+  $(".indexAdmin").on("click",function(){
+    $.ajax({
+      "url":"indexAdmin",
+      "method":"GET",
+      "dataType":"HTML",
+      "success": function(data) {
+        $(".container").html(data);
+      }
+    });
+  });
+  $("#refresh").on("click",function(){
+    alert("Refresco");
+    // $.ajax({
+    //   "url":"indexAdmin",
+    //   "method":"GET",
+    //   "dataType":"HTML",
+    //   "success": function(data) {
+    //     $(".container").html(data);
+    //   }
+    // });
+  });
 })

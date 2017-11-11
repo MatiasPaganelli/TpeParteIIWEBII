@@ -21,6 +21,8 @@ class AdminModel extends Model
   {
     $sentencia = $this->db->prepare( "INSERT INTO producto(id_categoria,nombre,precio,peso) VALUES (?,?,?,?)");
     $sentencia->execute([$categoria,$nombre,$precio,$peso]);
+    $id = $this->db->lastInsertId();
+    return $this->getProducto($id);
   }
 
   function borrarProducto($id_producto)
@@ -38,6 +40,12 @@ class AdminModel extends Model
     $sentencia = $this->db->prepare( "INSERT INTO categoria(nombre,descripcion) VALUES (?,?)");
     $sentencia->execute([$nombre,$descripcion]);
   }
+  function modificarProducto($id,$nombre,$descripcion)
+  {
+    $sentencia = $this->db->prepare( "UPDATE producto SET nombre=?, descripcion=? WHERE id=?");
+    $sentencia->execute([$id,$nombre,$descripcion]);
+  }
+
 }
 
 

@@ -1,6 +1,8 @@
-{include file= "headerVisit.tpl"}
 
 <h1>Lista de Productos:</h1>
+<button id="refresh" type="button" class="btn btn-default btn-xs pull-right" aria-label="Refresh">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+ </button>
   {foreach from=$productos item=producto}
   <div class="row">
     <div class="col-sm-6 col-md-6 col-lg-6">
@@ -18,4 +20,3 @@
     </div>
 </div>
 {/foreach}
-{include file= "footer.tpl"}

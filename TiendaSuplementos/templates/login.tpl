@@ -1,4 +1,3 @@
-{include file="headerVisit.tpl"}
 <div class="container">
 <div class="container col-md-6 col-md-offset-3">
   <form action="verificarUsuario" method="post">
@@ -18,4 +17,3 @@
   </form>
   </div>
   </div>
-{include file="footer.tpl"}

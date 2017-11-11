@@ -9,7 +9,12 @@ class ProductosModel extends Model
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
-
+  function getProducto($id_producto)
+  {
+    $sentencia = $this->db->prepare( "SELECT * FROM producto WHERE id=?");
+    $sentencia->execute([$id_producto]);
+    return $sentencia->fetch(PDO::FETCH_ASSOC);
+  }
   function storeProducto($categoria,$nombre,$precio,$peso)
   {
     $sentencia = $this->db->prepare( "INSERT INTO producto(id_categoria,nombre,precio,peso) VALUES (?,?,?,?)");

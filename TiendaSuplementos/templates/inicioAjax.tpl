@@ -3,7 +3,6 @@
 
 <div class="container">
   {include file="templates/Visit/productos.tpl"}
-
 </div><!-- /.container -->
 
 

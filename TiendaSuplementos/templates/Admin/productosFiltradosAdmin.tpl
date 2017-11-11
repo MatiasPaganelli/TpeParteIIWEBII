@@ -1,4 +1,7 @@
 {include file="headerAdmin.tpl"}
+<button id="refresh" type="button" class="btn btn-default btn-xs pull-right" aria-label="Refresh">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+ </button>
     {foreach from=$productos item=producto}
     {if $producto['id_categoria'] == $categoriaFiltrada}
     <div class="row">
