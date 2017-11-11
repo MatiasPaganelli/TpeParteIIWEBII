@@ -33,7 +33,7 @@ class ProductosApiController extends Api
       break;
     }
   }
-  public function deleteTareas($url_params = [])
+  public function deleteProducto($url_params = [])
   {
     switch (sizeof($url_params)) {
       case 0:
@@ -41,7 +41,7 @@ class ProductosApiController extends Api
       break;
       case 1:
       $id_producto = $url_params[0];
-      $producto = $this->model->getTarea($id_producto);
+      $producto = $this->model->getProducto($id_producto);
       if($producto)
       {
         $this->model->borrarProducto($id_producto);
@@ -55,12 +55,12 @@ class ProductosApiController extends Api
       break;
     }
   }
-  public function createTareas($url_params = []) {
+  public function createProductos($url_params = []) {
     if(sizeof($url_params) == 0) {
       $body = json_decode($this->raw_data);
       $nombre = $body->nombre;
       $descripcion = $body->descripcion;
-      $producto = $this->model->guardarTarea($nombre, $descripcion);
+      $producto = $this->model->guardarProducto($nombre, $descripcion);
       return $this->json_response($producto, 200);
 
     }

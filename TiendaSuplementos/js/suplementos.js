@@ -71,15 +71,26 @@ $(document).ready(function(){
       }
     });
   });
-  $("#refresh").on("click",function(){
-    alert("Refresco");
-    // $.ajax({
-    //   "url":"indexAdmin",
-    //   "method":"GET",
-    //   "dataType":"HTML",
-    //   "success": function(data) {
-    //     $(".container").html(data);
-    //   }
-    // });
-  });
+  // $("#refresh").on("click",function cargarProductos(){
+  //   function crearProducto(producto){
+  //    var element = '<li id="producto' + producto.id + '"class="list-group-item">'
+  //     element += producto.nombre;
+  //    element += '<a href="borrarProducto/' + producto.id + '"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
+  //    element += '</li>';
+  //    return element;
+  //  }
+  //
+  //   $.ajax("api/productos")
+  //        .done(function(productos) {
+  //            $('.caption h3 p').remove();
+  //            for (producto of productos) {
+  //              $('#listaProductos').append(createProductos(productos));
+  //            }
+  //         })
+  //        .fail(function() {
+  //            $('#listaProductos').append('<li>Imposible cargar la lista de productos</li>');
+  //        });
+  //
+  // });
+
 })

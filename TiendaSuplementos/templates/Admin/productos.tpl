@@ -9,7 +9,7 @@
       <div class="thumbnail">
         {html_image file = "{$producto['images']}"}
         <div class="caption">
-          <h3>{$producto['nombre']} </h3>
+          <p>{$producto['nombre']} </p>
           <p>{$producto['descripcion']}</p>
           <p>Categoria: {$producto['id_categoria']}</p>
           <p>{$producto['nombre']}</p>
