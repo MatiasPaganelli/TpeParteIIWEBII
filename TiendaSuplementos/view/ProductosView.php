@@ -12,6 +12,7 @@ class ProductosView extends View
   }
 function mostrarProductos($productos,$categorias){
   $this->smarty->assign('titulo','Index');
+  ksort($productos);
   $this->smarty->assign('productos',$productos);
   $this->smarty->assign('categorias',$categorias);
   $this->smarty->display('templates/inicioAjax.tpl');

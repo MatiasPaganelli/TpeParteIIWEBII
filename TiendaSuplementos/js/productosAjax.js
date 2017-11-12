@@ -1,5 +1,7 @@
 $(document).ready(function(){
-
+  let templateTarea;
+  $.ajax({ url: 'js/templates/tareas.mst'})
+   .done( template => templateTarea = template);
    function crearProducto(producto){
       var element = '<p id="producto' + producto.id;
       element += '<p>producto.nombre + ':' + producto.descripcion </p>';

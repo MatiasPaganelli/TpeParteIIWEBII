@@ -7,7 +7,7 @@ class AdminModel extends Model
 {
   function getCategorias()
   {
-    $sentencia = $this->db->prepare( "SELECT * FROM categoria");
+    $sentencia = $this->db->prepare( "SELECT * FROM categoria ORDER BY nombre");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
