@@ -1,4 +1,4 @@
-{include file="headerVisit.tpl"}
+
 <button id="refresh" type="button" class="btn btn-default btn-xs pull-right" aria-label="Refresh">
             <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
  </button>
@@ -18,4 +18,3 @@
   </div>
   {/if}
   {/foreach}
-  {include file="footer.tpl"}

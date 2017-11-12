@@ -15,7 +15,7 @@
           <p>{$producto['nombre']}</p>
           <p>Precio:{$producto['precio']}</p>
           <p>Peso: {$producto['peso']}</p>
-          <a href="borrarProducto/{$producto['id']}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+          <a href="borrarProducto/{$producto['id']}"><span class="glyphicon glyphicon-trash data-id="{{id}}""aria-hidden="true"></span></a>
         </div>
       </div>
     </div>

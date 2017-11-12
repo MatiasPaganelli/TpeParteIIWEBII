@@ -16,7 +16,7 @@ class AdminController extends Controller
 
     session_start();
     if (isset($_SESSION['email'])) {
-      if (time() - $_SESSION['LAST_ACTIVITY'] > 9999) {
+      if (time() - $_SESSION['LAST_ACTIVITY'] > 10000000) {
         header('Location: '.LOGOUT);
         die();
       }
@@ -103,24 +103,24 @@ class AdminController extends Controller
     $this->view->createProducto();
   }
 
-  public function storeProducto()
-  {
-    $categoria= isset($_POST['id_categoria']) ? $_POST['id_categoria'] : 0;
-    $nombre=isset($_POST['nombre']) ? $_POST['nombre'] : '';
-    $precio=isset($_POST['precio']) ? $_POST['precio']: 0;
-    $peso=isset($_POST['peso']) ? $_POST['peso'] : 0;
-
-    if ((isset($_POST['nombre']) && !empty($_POST['nombre']))
-    && (isset($_POST['nombre']) && !empty($_POST['nombre'])) &&
-    (isset($_POST['precio']) && !empty($_POST['precio'])) && (isset($_POST['peso']) && !empty($_POST['peso'])))
-    {
-      $this->model->storeProducto($categoria,$nombre,$precio,$peso);
-      header('Location: '.HOMEADMIN);
-    }
-    else{
-      $this->view->errorCrearProducto("Todos los campos son requeridos",$categoria,$nombre,$precio,$peso);
-    }
-  }
+  // public function storeProducto()
+  // {
+  //   $categoria= isset($_POST['id_categoria']) ? $_POST['id_categoria'] : 0;
+  //   $nombre=isset($_POST['nombre']) ? $_POST['nombre'] : '';
+  //   $precio=isset($_POST['precio']) ? $_POST['precio']: 0;
+  //   $peso=isset($_POST['peso']) ? $_POST['peso'] : 0;
+  //
+  //   if ((isset($_POST['nombre']) && !empty($_POST['nombre']))
+  //   && (isset($_POST['nombre']) && !empty($_POST['nombre'])) &&
+  //   (isset($_POST['precio']) && !empty($_POST['precio'])) && (isset($_POST['peso']) && !empty($_POST['peso'])))
+  //   {
+  //     $this->model->storeProducto($categoria,$nombre,$precio,$peso);
+  //     header('Location: '.HOMEADMIN);
+  //   }
+  //   else{
+  //     $this->view->errorCrearProducto("Todos los campos son requeridos",$categoria,$nombre,$precio,$peso);
+  //   }
+  // }
 
 
 }

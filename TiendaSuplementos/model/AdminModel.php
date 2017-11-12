@@ -21,8 +21,6 @@ class AdminModel extends Model
   {
     $sentencia = $this->db->prepare( "INSERT INTO producto(id_categoria,nombre,precio,peso) VALUES (?,?,?,?)");
     $sentencia->execute([$categoria,$nombre,$precio,$peso]);
-    $id = $this->db->lastInsertId();
-    return $this->getProducto($id);
   }
 
   function borrarProducto($id_producto)

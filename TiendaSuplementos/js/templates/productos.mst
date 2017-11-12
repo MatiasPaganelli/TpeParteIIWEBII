@@ -1,5 +1,7 @@
-<li id="producto{{id}}"class="list-group-item">
-    {{titulo}}
-  <a href="borrarTarea/{{id_tarea}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
-  <a href="finalizarTarea/{{id_tarea}}"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></a>
-</li>
+{{#productos}}
+<p id="producto{{id}}"class="list-group-item">
+    {{producto}}
+    {{descripcion}}
+  <a class="js-borrar" data-id="{{id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+</p>
+{{/productos}}

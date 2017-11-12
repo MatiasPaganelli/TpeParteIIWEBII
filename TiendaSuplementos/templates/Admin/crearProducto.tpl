@@ -21,7 +21,7 @@
         <label for="peso">Peso</label>
         <input type="text" class="form-control" id="peso" name="peso" placeholder="Peso del producto">
       </div>
-        <button type="submit" class="btn btn-default">Crear</button>
+        <button id="btnCrearProducto" type="submit" class="btn btn-default">Crear</button>
       </form>
     </div>
   </div>
