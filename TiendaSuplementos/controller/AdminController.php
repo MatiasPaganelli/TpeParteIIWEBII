@@ -1,5 +1,6 @@
 <?php
 include_once 'model/AdminModel.php';
+include_once 'model/ComentariosModel.php';
 include_once 'view/AdminView.php';
 include_once 'model/ImagenesModel.php';
 /**
@@ -7,11 +8,13 @@ include_once 'model/ImagenesModel.php';
 */
 class AdminController extends Controller
 {
+  protected $comentariosmodel;
   protected $view;
   protected $model;
 
   function __construct()
   {
+    $this->comentariosmodel =new ComentariosModel();
     $this->model=new AdminModel();
     $this->view=new Adminview();
 
@@ -162,7 +165,11 @@ class AdminController extends Controller
     $tipo_usuario = $params[0];
     $this->model->changePermiso($tipo_usuario);
     header('Location: '.HOMEADMIN);
-
+  }
+  function comentarios()
+  {
+    $comentarios = $this->comentariosmodel->getComentarios();
+    $this->view->mostrarComentarios($comentarios);
   }
 }
 ?>

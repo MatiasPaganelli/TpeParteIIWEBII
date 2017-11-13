@@ -91,6 +91,10 @@ class AdminView extends View
     $this->smarty->assign('usuarios', $usuarios);
     $this->smarty->display('templates/Admin/usuarios.tpl');
   }
+  function mostrarComentarios($comentarios){
+    $this->smarty->assign('comentarios',$comentarios);
+    $this->smarty->display('templates/Admin/comentarios.tpl'); 
+  }
 }
 
 

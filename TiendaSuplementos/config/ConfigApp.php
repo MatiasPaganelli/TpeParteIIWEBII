@@ -22,7 +22,8 @@ class ConfigApp
     'createUsuario'=>'AdminController#createUsuario',
     'storeUsuario'=>'AdminController#storeUsuario',
     'AdminUsuarios'=>'AdminController#administrarUsuarios',
-    'cambiarPermiso'=>'AdminController#cambiarPermiso'
+    'cambiarPermiso'=>'AdminController#cambiarPermiso',
+    'comentarios'=>'AdminController#comentarios'
   ];
 }
 ?>
