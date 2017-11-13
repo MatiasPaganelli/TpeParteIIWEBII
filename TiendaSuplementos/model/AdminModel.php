@@ -11,6 +11,12 @@ class AdminModel extends Model
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
+  function getUsuarios()
+  {
+    $sentencia = $this->db->prepare( "SELECT * FROM usuario");
+    $sentencia->execute();
+    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+  }
   function getProductos()
   {
     $sentencia = $this->db->prepare( "SELECT * FROM producto");
@@ -40,12 +46,20 @@ class AdminModel extends Model
     $sentencia = $this->db->prepare( "INSERT INTO categoria(nombre,descripcion) VALUES (?,?)");
     $sentencia->execute([$nombre,$descripcion]);
   }
+  function storeUsuario($userEmail,$userPassword,$tipoUsuario)
+  {
+    $sentencia = $this->db->prepare( "INSERT INTO usuario(email,password,tipo_usuario) VALUES (?,?,?)");
+    $sentencia->execute([$userEmail,$userPassword,$tipoUsuario]);
+  }
   function modificarProducto($id,$nombre,$descripcion)
   {
     $sentencia = $this->db->prepare( "UPDATE producto SET nombre=?, descripcion=? WHERE id=?");
     $sentencia->execute([$id,$nombre,$descripcion]);
   }
-
+function changePermiso($tipo_usuario, $id){
+  $sentencia = $this->db->prepare( "UPDATE usuario SET tipo_usuario=? WHERE id=?");
+  $sentencia->execute([$tipo_usuario, $id]);
+  }
 }
 
 

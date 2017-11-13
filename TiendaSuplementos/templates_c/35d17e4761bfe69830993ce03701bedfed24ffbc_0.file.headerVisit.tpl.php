@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-13 12:54:00
+/* Smarty version 3.1.30, created on 2017-11-13 22:31:59
   from "C:\xampp\htdocs\TPEWEBAjax\TpeParteIIWEBII\TiendaSuplementos\templates\headerVisit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0987d8e3ddb8_01398271',
+  'unifunc' => 'content_5a0a0f4f706542_81897511',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '35d17e4761bfe69830993ce03701bedfed24ffbc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPEWEBAjax\\TpeParteIIWEBII\\TiendaSuplementos\\templates\\headerVisit.tpl',
-      1 => 1510532009,
+      1 => 1510608718,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a0987d8e3ddb8_01398271 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0a0f4f706542_81897511 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
   <meta charset="utf-8">
@@ -69,11 +69,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
               </form>
             </div>
           </ul>
-          <ul class=" index nav navbar-nav navbar-right">
-            <li><a href="#">Index</a></li>
+          <ul class=" nav navbar-nav navbar-right">
+            <li><a href="index">Index</a></li>
           </ul>
-          <ul class=" login nav navbar-nav navbar-right">
-            <li><a href="#">Login</a></li>
+          <ul class=" nav navbar-nav navbar-right">
+            <li><a href="login">Login</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

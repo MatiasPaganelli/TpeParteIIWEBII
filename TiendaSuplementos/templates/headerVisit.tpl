@@ -30,11 +30,11 @@
               </form>
             </div>
           </ul>
-          <ul class=" index nav navbar-nav navbar-right">
-            <li><a href="#">Index</a></li>
+          <ul class=" nav navbar-nav navbar-right">
+            <li><a href="index">Index</a></li>
           </ul>
-          <ul class=" login nav navbar-nav navbar-right">
-            <li><a href="#">Login</a></li>
+          <ul class=" nav navbar-nav navbar-right">
+            <li><a href="login">Login</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

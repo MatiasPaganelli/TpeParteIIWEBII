@@ -65,6 +65,27 @@ class AdminController extends Controller
   {
     $this->view->create();
   }
+  public function createUsuario()
+  {
+    $this->view->createUsuario();
+  }
+  public function storeUsuario()
+  {
+    $userEmail =isset($_POST['email']) ? $_POST['email'] : '';
+    $userPassword = isset($_POST['password']) ? $_POST['password'] : '';
+    $tipoUsuario =isset($_POST['tipo_usuario']) ? $_POST['tipo_usuario'] : '';
+
+    if (isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['password']) && !empty($_POST['password']) && isset($_POST['tipo_usuario']) && !empty($_POST['tipo_usuario']))
+
+      {
+        $this->model->storeUsuario($userEmail,$userPassword,$tipoUsuario);
+        header('Location: '.HOMEADMIN);
+      }
+
+    else{
+      $this->view->errorCrearUsuario("Todos los campos son requeridos",$userEmail,$userPassword,$tipoUsuario);
+    }
+  }
   public function productosAdmin()
   {
     $categorias=$this->model->getCategorias();
@@ -79,7 +100,7 @@ class AdminController extends Controller
   }
   public function createProducto()
   {
-   $categorias=$this->model->getCategorias();
+    $categorias=$this->model->getCategorias();
     $this->view->createProducto($categorias);
   }
 
@@ -109,16 +130,6 @@ class AdminController extends Controller
     }
   }
 
-
-
-
-
-
-
-
-
-
-
   public function store()
   {
     $rutaTempImagenes = $_FILES['imagenes']['tmp_name'];
@@ -140,6 +151,18 @@ class AdminController extends Controller
     else{
       $this->view->errorCrearProducto("El campo titulo es requerido", $categoria,$nombre,$precio,$peso);
     }
+  }
+  function administrarUsuarios(){
+    $usuarios = $this->model->getUsuarios();
+    $this->view->administrarUsuarios($usuarios);
+
+  }
+  function cambiarPermiso($params)
+  {
+    $tipo_usuario = $params[0];
+    $this->model->changePermiso($tipo_usuario);
+    header('Location: '.HOMEADMIN);
+
   }
 }
 ?>

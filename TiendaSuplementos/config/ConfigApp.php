@@ -18,7 +18,11 @@ class ConfigApp
     'borrarCategoria'=>'AdminController#deleteCategoria',
     'agregarCategoria'=>'AdminController#createCategoria',
     'guardarCategoria'=>'AdminController#storeCategoria',
-    'filtrarAdmin'=>'AdminController#filtrarCategoria'
+    'filtrarAdmin'=>'AdminController#filtrarCategoria',
+    'createUsuario'=>'AdminController#createUsuario',
+    'storeUsuario'=>'AdminController#storeUsuario',
+    'AdminUsuarios'=>'AdminController#administrarUsuarios',
+    'cambiarPermiso'=>'AdminController#cambiarPermiso'
   ];
 }
 ?>

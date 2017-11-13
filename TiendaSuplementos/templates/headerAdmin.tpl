@@ -29,14 +29,23 @@
             </form>
             </div>
           </ul>
-          <ul class=" indexAdmin nav navbar-nav navbar-right">
-            <li><a href="#">IndexAdmin</a></li>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="indexAdmin">IndexAdmin</a></li>
           </ul>
-          <ul class=" logout nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="createUsuario">Crear usuario</a></li>
+          </ul>
+          <ul class=" nav navbar-nav navbar-right">
             <li><a href="logout">Logout</a></li>
           </ul>
-          <ul class="crearProducto nav navbar-nav navbar-right">
+          <ul class=" nav navbar-nav navbar-right">
+            <li><a href="modificarProducto">Modificar Producto</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
             <li><a href="agregarProducto">Crear Producto</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="AdminUsuarios">Administrar Usuarios</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

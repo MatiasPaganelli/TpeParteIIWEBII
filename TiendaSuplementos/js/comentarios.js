@@ -25,13 +25,13 @@ $(document).ready(function(){
      };
      $.ajax({
        "method":"POST",
-       "url":"api/productos",
-       "data":JSON.stringify(producto),
-       "success": function(producto) {
-         cargarProductos();
+       "url":"api/comentarios",
+       "data":JSON.stringify(comentario),
+       "success": function(comentario) {
+         cargarComentarios();
        },
        "error" : function() {
-         alert("Imposible crear producto");
+         alert("Imposible publicar comentario");
        }
      });
    }

@@ -7,7 +7,10 @@ class ConfigApi
   public static $RESOURCES = [
     'productos#GET' => 'ProductosApiController#getProductos',
     'productos#DELETE'=> 'ProductosApiController#deleteProducto',
-    'productos#POST'=> 'ProductosApiController#createProductos'
+    'productos#POST'=> 'ProductosApiController#createProductos',
+    'comentarios#GET' => 'ComentariosApiController#getComentarios',
+    'comentarios#DELETE'=> 'ComentariosApiController#deleteComentarios',
+    'comentarios#POST'=> 'ComentariosApiController#createComentarios'
   ];
 }
 
