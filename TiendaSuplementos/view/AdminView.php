@@ -24,38 +24,16 @@ class AdminView extends View
     $this->smarty->assign('productos',$productos);
     $this->smarty->display('templates/Admin/indexAdmin.tpl');
   }
-
-  function proteinasAdmin($productos){
-    $this->smarty->assign('titulo','Proteinas');
-    $this->smarty->assign('productos',$productos);
-    $this->smarty->display('templates/Admin/proteinas.tpl');
-  }
-
-  function creatinasAdmin($productos){
-    $this->smarty->assign('titulo','Creatinas');
-    $this->smarty->assign('productos',$productos);
-    $this->smarty->display('templates/Admin/creatinas.tpl');
-  }
-
-  function preentrenosAdmin($productos){
-    $this->smarty->assign('titulo','Pre Entrenos');
-    $this->smarty->assign('productos',$productos);
-    $this->smarty->display('templates/Admin/preentrenos.tpl');
-  }
-  function ganadoresAdmin($productos){
-    $this->smarty->assign('titulo','Ganadores');
-    $this->smarty->assign('productos',$productos);
-    $this->smarty->display('templates/Admin/ganadores.tpl');
-  }
   function borrarProducto($id_producto)
   {
     $this->smarty->assign('producto',$id_producto);
     $this->smarty->display('templates/Admin/productos.tpl');
   }
-  function createProducto()
+  function createProducto($categorias)
   {
     $this->assignarProductoForm();
     $this->smarty->assign('titulo','Crear Productos');
+    $this->smarty->assign('categorias',$categorias);
     $this->smarty->display('templates/Admin/crearProducto.tpl');
   }
   private function assignarProductoForm($categoria=0, $nombre='', $precio='',$peso='')
@@ -69,7 +47,7 @@ class AdminView extends View
   function errorCrearProducto($error,$categoria,$nombre,$precio,$peso)
   {
     $this->smarty->assign('titulo','MVC error');
-    $this->assignarTareaForm($categoria,$nombre,$precio,$peso);
+    $this->assignarProductoForm($categoria,$nombre,$precio,$peso);
     $this->smarty->assign('error',$error);
     $this->smarty->display('templates/Admin/crearProducto.tpl');
   }

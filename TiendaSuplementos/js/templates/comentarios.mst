@@ -1,0 +1,6 @@
+{{#comentarios}}
+<p id="comentario"class="list-group-item">
+    {{descripcion}}
+  <a class="js-comentar" data-id="{{id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+</p>
+{{/comentarios}}

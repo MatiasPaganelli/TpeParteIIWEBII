@@ -1,13 +1,9 @@
-  {include file="headerAdmin.tpl"}
-
-
-  <h1>Lista de Productos:</h1>
-
+<h1>Lista de Productos:</h1>
   {foreach from=$productos item=producto}
   <div class="row">
     <div class="col-sm-6 col-md-6 col-lg-6">
       <div class="thumbnail">
-        {html_image file = "{$producto['images']}"}
+        <img src="{$imagen['path']}" alt="Imagen del producto {$producto['nombre']}">
         <div class="caption">
           <p>{$producto['nombre']} </p>
           <p>{$producto['descripcion']}</p>
@@ -20,4 +16,3 @@
       </div>
     </div>
     {/foreach}
-    {include file="footer.tpl"}

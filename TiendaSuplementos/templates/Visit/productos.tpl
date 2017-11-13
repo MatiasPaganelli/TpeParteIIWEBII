@@ -1,4 +1,4 @@
-<h1>Lista de Productos:</h1>
+<h1>Lista de Productos SA:</h1>
 <div class="row">
   <button id="refresh" type="button" class="btn btn-default btn-xs pull-right" aria-label="Refresh">
     <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
@@ -42,7 +42,7 @@
       </div>
     </div>
     </div>
-    <!-- <div class="row">
+    <div class="row">
     <div class="col-sm-6 col-md-6 col-lg-6">
     <div class="thumbnail">
     <div class="caption">
@@ -54,7 +54,6 @@
   </ol>
   <div class="carousel-inner">
   <div class="carousel-item active">
-  {html_image file = "{$producto['images']}"}
 </div>
 <div class="carousel-item">
 <img class="d-block w-100" src="..." alt="Second slide">
@@ -71,7 +70,7 @@
 <span class="carousel-control-next-icon" aria-hidden="true"></span>
 <span class="sr-only">Next</span>
 </a>
-</div> -->
+</div>
 <!-- {html_image file = "{$producto['images']}"} -->
 <h3>{$producto['nombre']} </h3>
 <p>{$producto['descripcion']}</p>

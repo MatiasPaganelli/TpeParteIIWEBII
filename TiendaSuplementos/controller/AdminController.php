@@ -1,6 +1,7 @@
 <?php
 include_once 'model/AdminModel.php';
 include_once 'view/AdminView.php';
+include_once 'model/ImagenesModel.php';
 /**
 *
 */
@@ -70,28 +71,6 @@ class AdminController extends Controller
     $productos=$this->model->getProductos();
     $this->view->mostrarProductosAdmin($productos,$categorias);
   }
-
-  public function proteinasAdmin(){
-    $productos=$this->model->getProductos();
-    $this->view->proteinasAdmin($productos);
-
-  }
-  public function creatinasAdmin(){
-    $productos=$this->model->getProductos();
-    $this->view->creatinasAdmin($productos);
-
-  }
-  public function preentrenosAdmin(){
-    $productos=$this->model->getProductos();
-    $this->view->preentrenosAdmin($productos);
-
-  }
-
-  public function ganadoresAdmin(){
-    $productos=$this->model->getProductos();
-    $this->view->ganadoresAdmin($productos);
-
-  }
   public function deleteProducto($params)
   {
     $id_producto = $params[0];
@@ -100,28 +79,67 @@ class AdminController extends Controller
   }
   public function createProducto()
   {
-    $this->view->createProducto();
+   $categorias=$this->model->getCategorias();
+    $this->view->createProducto($categorias);
   }
 
-  // public function storeProducto()
-  // {
-  //   $categoria= isset($_POST['id_categoria']) ? $_POST['id_categoria'] : 0;
-  //   $nombre=isset($_POST['nombre']) ? $_POST['nombre'] : '';
-  //   $precio=isset($_POST['precio']) ? $_POST['precio']: 0;
-  //   $peso=isset($_POST['peso']) ? $_POST['peso'] : 0;
-  //
-  //   if ((isset($_POST['nombre']) && !empty($_POST['nombre']))
-  //   && (isset($_POST['nombre']) && !empty($_POST['nombre'])) &&
-  //   (isset($_POST['precio']) && !empty($_POST['precio'])) && (isset($_POST['peso']) && !empty($_POST['peso'])))
-  //   {
-  //     $this->model->storeProducto($categoria,$nombre,$precio,$peso);
-  //     header('Location: '.HOMEADMIN);
-  //   }
-  //   else{
-  //     $this->view->errorCrearProducto("Todos los campos son requeridos",$categoria,$nombre,$precio,$peso);
-  //   }
-  // }
+  public function storeProducto()
+  {
+    $rutaTempImagen = $_FILES['imagen']['tmp_name'];
+    $categoria= isset($_POST['id_categoria']) ? $_POST['id_categoria'] : 0;
+    $nombre=isset($_POST['nombre']) ? $_POST['nombre'] : '';
+    $precio=isset($_POST['precio']) ? $_POST['precio']: 0;
+    $peso=isset($_POST['peso']) ? $_POST['peso'] : 0;
+
+    if ((isset($_POST['nombre']) && !empty($_POST['nombre']))
+    && (isset($_POST['nombre']) && !empty($_POST['nombre'])) &&
+    (isset($_POST['precio']) && !empty($_POST['precio'])) && (isset($_POST['peso']) && !empty($_POST['peso'])))
+    {
+      $this->model->storeProducto($categoria,$nombre,$precio,$peso);
+      header('Location: '.HOMEADMIN);
+      if($_FILES['imagen']['type'] == 'image/jpeg') {
+        $this->model->guardarProducto($categoria, $nombre, $precio,$peso,$rutaTempImagen);
+      }
+      else{
+        $this->view->errorCrear("La imagen tiene que ser JPG.", $titulo, $descripcion, $completada);
+      }
+    }
+    else{
+      $this->view->errorCrearProducto("Todos los campos son requeridos",$categoria,$nombre,$precio,$peso);
+    }
+  }
 
 
+
+
+
+
+
+
+
+
+
+  public function store()
+  {
+    $rutaTempImagenes = $_FILES['imagenes']['tmp_name'];
+    $categoria = $_POST['categoria'];
+    $nombre = $_POST['nombre'];
+    $precio = isset($_POST['precio']) ? $_POST['precio'] : 0;
+    $peso = isset($_POST['peso']) ? $_POST['peso'] : 0;
+    if ((isset($_POST['nombre']) && !empty($_POST['nombre']))
+    && (isset($_POST['nombre']) && !empty($_POST['nombre'])) &&
+    (isset($_POST['precio']) && !empty($_POST['precio'])) && (isset($_POST['peso']) && !empty($_POST['peso']))){
+      if($this->sonJPG($_FILES['imagenes']['type'])) {
+        $this->model->guardarProducto($categoria,$nombre,$precio,$peso,$rutaTempImagenes);
+        header('Location: '.HOME);
+      }
+      else{
+        $this->view->errorCrearProducto("Las imagenes tienen que ser JPG.", $categoria,$nombre,$precio,$peso);
+      }
+    }
+    else{
+      $this->view->errorCrearProducto("El campo titulo es requerido", $categoria,$nombre,$precio,$peso);
+    }
+  }
 }
 ?>

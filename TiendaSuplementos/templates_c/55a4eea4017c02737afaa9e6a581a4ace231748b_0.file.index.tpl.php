@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-11 20:37:35
+/* Smarty version 3.1.30, created on 2017-11-13 14:55:43
   from "C:\xampp\htdocs\TPEWEBAjax\TpeParteIIWEBII\TiendaSuplementos\templates\Visit\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a07517f993035_94655596',
+  'unifunc' => 'content_5a09a45fc932c5_47811779',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '55a4eea4017c02737afaa9e6a581a4ace231748b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPEWEBAjax\\TpeParteIIWEBII\\TiendaSuplementos\\templates\\Visit\\index.tpl',
-      1 => 1510429050,
+      1 => 1510492693,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a07517f993035_94655596 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a09a45fc932c5_47811779 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_image')) require_once 'C:\\xampp\\htdocs\\TPEWEBAjax\\TpeParteIIWEBII\\TiendaSuplementos\\libs\\plugins\\function.html_image.php';
 ?>
 

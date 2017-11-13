@@ -27,6 +27,7 @@ class ProductosModel extends Model
     $sentencia->execute([$id_producto]);
   }
 
+
 }
 
 ?>

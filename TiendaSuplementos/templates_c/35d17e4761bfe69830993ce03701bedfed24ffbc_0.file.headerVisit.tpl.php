@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-11 21:27:17
+/* Smarty version 3.1.30, created on 2017-11-13 12:54:00
   from "C:\xampp\htdocs\TPEWEBAjax\TpeParteIIWEBII\TiendaSuplementos\templates\headerVisit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a075d255a4ac1_00933020',
+  'unifunc' => 'content_5a0987d8e3ddb8_01398271',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '35d17e4761bfe69830993ce03701bedfed24ffbc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPEWEBAjax\\TpeParteIIWEBII\\TiendaSuplementos\\templates\\headerVisit.tpl',
-      1 => 1510432031,
+      1 => 1510532009,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a075d255a4ac1_00933020 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0987d8e3ddb8_01398271 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
   <meta charset="utf-8">
@@ -65,7 +65,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
                 </select>
-                <button class="btn btn-lg btn-primary btn-block dofilter" type="submit">Filtrar</button>
+                <button id="btn-FiltrarCategoria"class="btn btn-lg btn-primary btn-block dofilter" type="submit">Filtrar</button>
               </form>
             </div>
           </ul>

@@ -17,10 +17,12 @@ class AdminModel extends Model
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
-  function storeProducto($categoria,$nombre,$precio,$peso)
+  function storeProducto($categoria,$nombre,$precio,$peso,$imagen)
   {
-    $sentencia = $this->db->prepare( "INSERT INTO producto(id_categoria,nombre,precio,peso) VALUES (?,?,?,?)");
-    $sentencia->execute([$categoria,$nombre,$precio,$peso]);
+    $destino_final = 'images/' . uniqid() . '.jpg';
+     move_uploaded_file($imagen, $destino_final);
+    $sentencia = $this->db->prepare( "INSERT INTO producto(id_categoria,nombre,precio,peso,images) VALUES (?,?,?,?,?)");
+    $sentencia->execute([$categoria,$nombre,$precio,$peso,$destino_final]);
   }
 
   function borrarProducto($id_producto)

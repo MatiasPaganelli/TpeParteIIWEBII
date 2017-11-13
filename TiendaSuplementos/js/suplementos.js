@@ -42,4 +42,14 @@ $(document).ready(function(){
       }
     });
   });
+  // $(".crearProducto").on("click",function(){
+  //   $.ajax({
+  //     "url":"agregarProducto",
+  //     "method":"GET",
+  //     "dataType":"HTML",
+  //     "success": function(data) {
+  //       $(".container").html(data);
+  //     }
+  //   });
+  // });
 });

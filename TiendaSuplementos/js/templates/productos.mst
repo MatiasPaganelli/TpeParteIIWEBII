@@ -1,7 +1,0 @@
-{{#productos}}
-<p id="producto{{id}}"class="list-group-item">
-    {{producto}}
-    {{descripcion}}
-  <a class="js-borrar" data-id="{{id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
-</p>
-{{/productos}}

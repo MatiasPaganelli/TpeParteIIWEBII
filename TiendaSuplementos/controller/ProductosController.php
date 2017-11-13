@@ -3,6 +3,8 @@
 
 include_once 'view/Productosview.php';
 include_once 'model/ProductosModel.php';
+include_once 'model/ImagenesModel.php';
+
 
 class ProductosController extends Controller
 {

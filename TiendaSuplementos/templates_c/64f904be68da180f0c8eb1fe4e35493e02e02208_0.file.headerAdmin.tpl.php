@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-11 20:42:44
+/* Smarty version 3.1.30, created on 2017-11-13 17:13:40
   from "C:\xampp\htdocs\TPEWEBAjax\TpeParteIIWEBII\TiendaSuplementos\templates\headerAdmin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0752b43e2b71_59211057',
+  'unifunc' => 'content_5a09c4b4bc85b6_60063268',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '64f904be68da180f0c8eb1fe4e35493e02e02208' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPEWEBAjax\\TpeParteIIWEBII\\TiendaSuplementos\\templates\\headerAdmin.tpl',
-      1 => 1510428825,
+      1 => 1510589620,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a0752b43e2b71_59211057 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a09c4b4bc85b6_60063268 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
   <meta charset="utf-8">
@@ -72,7 +72,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             <li><a href="#">IndexAdmin</a></li>
           </ul>
           <ul class=" logout nav navbar-nav navbar-right">
-            <li><a href="#">Logout</a></li>
+            <li><a href="logout">Logout</a></li>
+          </ul>
+          <ul class="crearProducto nav navbar-nav navbar-right">
+            <li><a href="agregarProducto">Crear Producto</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
