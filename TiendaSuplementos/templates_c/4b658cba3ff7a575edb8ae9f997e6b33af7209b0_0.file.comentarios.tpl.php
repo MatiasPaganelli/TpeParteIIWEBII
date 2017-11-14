@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-14 12:54:51
+/* Smarty version 3.1.30, created on 2017-11-14 20:27:18
   from "C:\xampp\htdocs\TPEWEBAjax\TpeParteIIWEBII\TiendaSuplementos\templates\Admin\comentarios.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0ad98bc7fcf5_55485088',
+  'unifunc' => 'content_5a0b4396090e32_99314447',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4b658cba3ff7a575edb8ae9f997e6b33af7209b0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPEWEBAjax\\TpeParteIIWEBII\\TiendaSuplementos\\templates\\Admin\\comentarios.tpl',
-      1 => 1510660491,
+      1 => 1510687636,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5a0ad98bc7fcf5_55485088 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0b4396090e32_99314447 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:headerAdmin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -48,22 +48,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
 <h2>DEJA TU COMENTARIO:</h2>
-<form class="form-horizontal col-sm-6 col-md-6 col-lg-6">
+<form  action="enviarComentario" class="form-horizontal col-sm-6 col-md-6 col-lg-6">
   <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Producto:</label>
+    <label for="producto" class="col-sm-2 control-label">Producto:</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input class="form-control" id="producto" placeholder="Whey Protein">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Comentario:</label>
+    <label for="comentario" class="col-sm-2 control-label">Comentario:</label>
     <div class="col-sm-10">
-      <textarea class="form-control" rows="3"></textarea>
+      <textarea id="comentario" class="form-control" rows="3"  placeholder="Este producto es de muy buena calidad"></textarea>
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Sign in</button>
+      <button type="submit" class="btn btn-default">Enviar</button>
     </div>
   </div>
 </form>
