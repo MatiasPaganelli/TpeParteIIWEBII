@@ -1,6 +1,13 @@
 {{#comentarios}}
-<p id="comentario"class="list-group-item">
-    {{descripcion}}
-  <a class="js-comentar" data-id="{{id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
-</p>
+	<div class='panel panel-default'>
+		<div class="panel-heading" id="{{fk_id_producto}}">
+			<h2 class='panel-title usuario'>{{fk_id_usuario}}</h2>
+			<h4 class="calificacion">+ {{calificacion}}</h4>
+		</div>
+		<div class='panel-body'>
+			<section>
+	    		{{descripcion}}
+		 	</section>
+	 	</div>
+	</div>
 {{/comentarios}}

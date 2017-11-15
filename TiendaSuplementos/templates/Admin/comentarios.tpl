@@ -25,9 +25,9 @@
       <textarea id="comentario" class="form-control" rows="3"  placeholder="Este producto es de muy buena calidad"></textarea>
     </div>
   </div>
-  <div class="form-group">
+  <div class="cargarComentario form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Enviar</button>
+      <button type="submit" class=" btn btn-default">Enviar</button>
     </div>
   </div>
 </form>

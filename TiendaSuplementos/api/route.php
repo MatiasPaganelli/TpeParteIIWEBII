@@ -2,33 +2,28 @@
 define('RESOURCE', 0);
 define('PARAMS', 1);
 include_once '../model/Model.php';
-include_once 'config/ConfigApi.php';
-include_once 'controller/ProductosApiController.php';
+include_once 'controller/ComentariosApiController.php';
+include_once 'config/router.php';
 
-function parseURL($url)
-{
-  $urlExploded = explode('/', trim($url,'/'));
-  $arrayReturn[ConfigApi::$RESOURCE] = $urlExploded[RESOURCE] . '#' . $_SERVER['REQUEST_METHOD'];
-  $arrayReturn[ConfigApi::$PARAMS] = isset($urlExploded[PARAMS]) ? array_slice($urlExploded,1) : null;
-  return $arrayReturn;
-}
 
-if(isset($_GET['resource'])){
-  $urlData = parseURL($_GET['resource']);
-  $resource = $urlData[ConfigApi::$RESOURCE];
-  if(array_key_exists($resource,ConfigApi::$RESOURCES)){
-    $url_params = $urlData[ConfigApi::$PARAMS];
-    $controller_method = explode('#',ConfigApi::$RESOURCES[$resource]);
-    $controller = new $controller_method[0]();
-    $method = $controller_method[1];
-    if(!empty($url_params)){
-      echo $controller->$method($url_params);
+$router = new Router();
+    //url, verb, controller, method
+    $router->AddRoute("comentarios", "GET", "ComentariosApiController", "getComentarios");
+    $router->AddRoute("comentariosproductos/:id", "GET", "ComentariosApiController", "getComentariosProducto");
+    $router->AddRoute("comentariosusuario/:id", "GET", "ComentariosApiController", "getComentariosUsuario");
+    $router->AddRoute("comentarios/:id", "GET", "ComentariosApiController", "getComentario");
+    $router->AddRoute("comentarios", "POST", "ComentariosApiController", "createComentario");
+    $router->AddRoute("comentarios/:id", "DELETE", "ComentariosApiController", "deleteComentario");
+    $route = $_GET['resource'];
+    $array = $router->Route($route);
+    if(sizeof($array) == 0)
+        echo "404";
+    else
+    {
+        $controller = $array[0];
+        $metodo = $array[1];
+        $url_params = $array[2];
+        echo (new $controller())->$metodo($url_params);
     }
-    else{
-      echo $controller->$method();
-    }
-  }
-}
-
 
 ?>
