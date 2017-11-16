@@ -18,8 +18,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">  <div class="col-md-4 col-sm-3 col-lg-4">
-            <form action="filtrarAdmin" method="POST">
-              <select name="filtrarAdmin" class="form-control filter">
+            <form action="filtrarUser" method="POST">
+              <select name="filtrarUser" class="form-control filter">
                 <option value="" selected disabled hidden>Categorias</option>
                 {foreach from=$categorias item=categoria}
                 <option value="{$categoria['id']}">{$categoria['nombre']}</option>
@@ -30,23 +30,10 @@
             </div>
           </ul>
           <ul class="cargarComentario nav navbar-nav navbar-right">
-            <li><a href="indexAdmin">IndexAdmin</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="createUsuario">Crear usuario</a></li>
+            <li><a href="indexUser">Index</a></li>
           </ul>
           <ul class=" nav navbar-nav navbar-right">
             <li><a href="logout">Logout</a></li>
-          </ul>
-          <ul class=" nav navbar-nav navbar-right">
-            <li><a href="modificarProducto">Modificar Producto</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="agregarProducto">Crear Producto</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="AdminUsuarios">Administrar Usuarios</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

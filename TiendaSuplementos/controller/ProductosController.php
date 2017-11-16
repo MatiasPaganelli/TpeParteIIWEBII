@@ -59,6 +59,12 @@ class ProductosController extends Controller
     $this->view->ganadores($productos);
 
   }
+  public function detalleProducto($params){
+      $id_producto = $params[0];
+      $productos =$this->model->getProducto($id_producto);
+      $this->view->detalleProducto($productos);
+  }
+
 
 }
 

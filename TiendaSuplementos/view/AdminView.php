@@ -96,6 +96,11 @@ class AdminView extends View
     $this->smarty->assign('comentarios',$comentarios);
     $this->smarty->display('templates/Admin/comentarios.tpl');
   }
+  function detalleProducto($productos){
+    $this->smarty->assign('productos',$productos);
+    $this->smarty->assign('titulo', 'Detalles');
+    $this->smarty->display('templates/Admin/detalleProducto.tpl');
+  }
 }
 
 

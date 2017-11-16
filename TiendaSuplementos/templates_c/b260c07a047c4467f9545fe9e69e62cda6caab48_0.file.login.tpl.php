@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-14 23:54:28
+/* Smarty version 3.1.30, created on 2017-11-16 01:50:46
   from "/Applications/XAMPP/xamppfiles/htdocs/TPEWEBIIE2Carlos/TpeParteIIWEBII/TiendaSuplementos/templates/login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0b74244f2d71_69977338',
+  'unifunc' => 'content_5a0ce0e627e4e9_41881024',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b260c07a047c4467f9545fe9e69e62cda6caab48' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/TPEWEBIIE2Carlos/TpeParteIIWEBII/TiendaSuplementos/templates/login.tpl',
-      1 => 1510608970,
+      1 => 1510793425,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5a0b74244f2d71_69977338 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0ce0e627e4e9_41881024 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:headerVisit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

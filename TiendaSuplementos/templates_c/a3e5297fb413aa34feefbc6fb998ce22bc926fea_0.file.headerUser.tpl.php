@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-15 21:51:32
-  from "/Applications/XAMPP/xamppfiles/htdocs/TPEWEBIIE2Carlos/TpeParteIIWEBII/TiendaSuplementos/templates/headerAdmin.tpl" */
+/* Smarty version 3.1.30, created on 2017-11-15 21:15:20
+  from "/Applications/XAMPP/xamppfiles/htdocs/TPEWEBIIE2Carlos/TpeParteIIWEBII/TiendaSuplementos/templates/headerUser.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0ca8d480ef35_97858853',
+  'unifunc' => 'content_5a0ca058bf69c5_36410670',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '214bc4a7e3d2c11f138251a3f0fa5c300b6c20f0' => 
+    'a3e5297fb413aa34feefbc6fb998ce22bc926fea' => 
     array (
-      0 => '/Applications/XAMPP/xamppfiles/htdocs/TPEWEBIIE2Carlos/TpeParteIIWEBII/TiendaSuplementos/templates/headerAdmin.tpl',
-      1 => 1510778876,
+      0 => '/Applications/XAMPP/xamppfiles/htdocs/TPEWEBIIE2Carlos/TpeParteIIWEBII/TiendaSuplementos/templates/headerUser.tpl',
+      1 => 1510776919,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a0ca8d480ef35_97858853 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0ca058bf69c5_36410670 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
   <meta charset="utf-8">
@@ -46,8 +46,8 @@ echo $_prefixVariable1;?>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">  <div class="col-md-4 col-sm-3 col-lg-4">
-            <form action="filtrarAdmin" method="POST">
-              <select name="filtrarAdmin" class="form-control filter">
+            <form action="filtrarUser" method="POST">
+              <select name="filtrarUser" class="form-control filter">
                 <option value="" selected disabled hidden>Categorias</option>
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categorias']->value, 'categoria');
@@ -69,23 +69,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             </div>
           </ul>
           <ul class="cargarComentario nav navbar-nav navbar-right">
-            <li><a href="indexAdmin">IndexAdmin</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="createUsuario">Crear usuario</a></li>
+            <li><a href="indexUser">Index</a></li>
           </ul>
           <ul class=" nav navbar-nav navbar-right">
             <li><a href="logout">Logout</a></li>
-          </ul>
-          <ul class=" nav navbar-nav navbar-right">
-            <li><a href="modificarProducto">Modificar Producto</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="agregarProducto">Crear Producto</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="AdminUsuarios">Administrar Usuarios</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

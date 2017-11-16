@@ -1,6 +1,6 @@
 {{#comentarios}}
-	<div class='panel panel-default'>
-		<div class="panel-heading" id="{{fk_id_producto}}">
+	<div class= 'comentarios panel panel-default'>
+		<div class="panel-heading" id="{{id_producto}}">
 			<h2 class='panel-title usuario'>{{fk_id_usuario}}</h2>
 			<h4 class="calificacion">+ {{calificacion}}</h4>
 		</div>

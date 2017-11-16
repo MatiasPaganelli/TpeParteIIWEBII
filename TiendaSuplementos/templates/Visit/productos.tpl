@@ -1,4 +1,5 @@
-<h1>Lista de Productos SA:</h1>
+{include file="headerVisit.tpl"}
+<h1>Lista de Productos:</h1>
 <div class="row">
   <button id="refresh" type="button" class="btn btn-default btn-xs pull-right" aria-label="Refresh">
     <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
@@ -6,21 +7,18 @@
 </div>
 
 {foreach from=$productos item=producto}
-<div class="container-fluid well">
+<!-- <div class="container-fluid well">
   <div class="row">
     <div class="col-md-4 col-sm-6">
         <div id="carousel-noticia" class="carousel slide" data-ride="carousel" data-interval="10">
-        <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#carousel-noticia" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-noticia" data-slide-to="1"></li>
           <li data-target="#carousel-noticia" data-slide-to="2"></li>
         </ol>
-
-        <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            {html_image file = "{$producto['images']}"}
+            <a href="detalleProducto">{html_image file = "{$producto['images']}"}</a>
           </div>
           <div class="item">
             {html_image file = "{$producto['images']}"}
@@ -30,7 +28,7 @@
           </div>
         </div>
 
-        <!-- Controls -->
+
         <a class="left carousel-control" href="#carousel-noticia" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Anterior</span>
@@ -70,16 +68,14 @@
 <span class="carousel-control-next-icon" aria-hidden="true"></span>
 <span class="sr-only">Next</span>
 </a>
-</div>
-<!-- {html_image file = "{$producto['images']}"} -->
+</div> -->
+<a href="detalleProducto/{$producto['id']}">{html_image file = "{$producto['images']}"}</a>
 <h3>{$producto['nombre']} </h3>
-<p>{$producto['descripcion']}</p>
-<p>Categoria: {$producto['id_categoria']}</p>
-<p>{$producto['nombre']}</p>
-<p>Precio:{$producto['precio']}</p>
-<p>Peso: {$producto['peso']}</p>
+
+<!-- </div>
 </div>
 </div>
 </div>
-</div>
+</div> -->
 {/foreach}
+{include file="footer.tpl"}

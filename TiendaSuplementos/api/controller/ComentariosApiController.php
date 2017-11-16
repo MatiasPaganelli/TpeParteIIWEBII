@@ -41,9 +41,9 @@ require_once('Api.php');
      }
      public function createComentario($url_params = [])
      {
-         session_start();
-         if(isset($_SESSION['USER']))
-         {
+         // session_start();
+         // // if(isset($_SESSION['USER']))
+         // {
              $body = json_decode($this->raw_data);
              $fk_id_usuario = $body->fk_id_usuario;
              $id_producto = $body->id_producto;
@@ -51,14 +51,14 @@ require_once('Api.php');
              $descripcion = $body->descripcion;
              $comentario = $this->model->createComentario($fk_id_usuario, $id_producto, $calificacion, $descripcion);
              return $this->json_response($comentario, 200);
-             if (time() - $_SESSION['LAST_ACTIVITY'] > 400)
-             {
-                 header('Location: '.LOGOUT);
-                 die();
-             }
-             $_SESSION['LAST_ACTIVITY'] = time();
+             // if (time() - $_SESSION['LAST_ACTIVITY'] > 400)
+             // {
+             //     header('Location: '.LOGOUT);
+             //     die();
+             // }
+             // $_SESSION['LAST_ACTIVITY'] = time();
          }
-     }
+     
      public function deleteComentario($url_params = [])
      {
        $id = $url_params[":id"];

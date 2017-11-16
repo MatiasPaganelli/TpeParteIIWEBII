@@ -3,7 +3,7 @@ define('RESOURCE', 0);
 define('PARAMS', 1);
 include_once '../model/Model.php';
 include_once 'controller/ComentariosApiController.php';
-include_once 'config/router.php';
+include_once 'config/Router.php';
 
 
 $router = new Router();

@@ -15,13 +15,18 @@ function mostrarProductos($productos,$categorias){
   ksort($productos);
   $this->smarty->assign('productos',$productos);
   $this->smarty->assign('categorias',$categorias);
-  $this->smarty->display('templates/inicioAjax.tpl');
+  $this->smarty->display('templates/Visit/productos.tpl');
 }
 function mostrarIndex($productos,$categorias){
   $this->smarty->assign('titulo','Index');
   $this->smarty->assign('productos',$productos);
   $this->smarty->assign('categorias',$categorias);
-  $this->smarty->display('templates/Visit/index.tpl');
+  $this->smarty->display('templates/Visit/productos.tpl');
+}
+function detalleProducto($productos){
+  $this->smarty->assign('productos',$productos);
+  $this->smarty->assign('titulo', 'Detalles');
+  $this->smarty->display('templates/Visit/detalleProducto.tpl');
 }
 }
 

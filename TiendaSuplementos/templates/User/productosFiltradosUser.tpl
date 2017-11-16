@@ -1,7 +1,4 @@
-{include file="headerVisit.tpl"}
-<button type="button" class="btn btn-default btn-xs pull-right" aria-label="Refresh">
-            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
- </button>
+{include file="headerUser.tpl"}
 {foreach from=$productos item=producto}
 {if $producto['id_categoria'] == $categoriaFiltrada}
 <div class="row">

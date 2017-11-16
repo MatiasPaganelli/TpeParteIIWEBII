@@ -11,10 +11,10 @@ class ComentariosModel extends Model
 
   }
 
-  function getComentariosProducto($id)
+  function getComentariosProducto($id_producto)
 		{
-			$sentencia = $this->db->prepare('SELECT * FROM comentario WHERE $fk_id_usuario = ?');
-			$sentencia->execute([$id]);
+			$sentencia = $this->db->prepare('SELECT * FROM comentario WHERE id_producto = ?');
+			$sentencia->execute([$id_producto]);
 			return $sentencia->fetchAll(PDO::FETCH_ASSOC);
 		}
 
@@ -32,10 +32,10 @@ class ComentariosModel extends Model
 			return $sentencia->fetch(PDO::FETCH_ASSOC);
 		}
 
-    function createComentario($fk_id_usuario, $fk_usuario, $fk_id_celular, $fk_puntaje, $textocomentario)
+      function createComentario($fk_id_usuario, $id_producto, $descripcion, $calificacion)
 		{
-			$sentencia = $this->db->prepare('INSERT INTO comentario(fk_id_usuario, id_producto, calificacion, descripcion) VALUES(?,?,?,?,?)');
-			$sentencia->execute([$fk_id_usuario, $id_producto, $calificacion, $descripcion]);
+			$sentencia = $this->db->prepare('INSERT INTO comentario(fk_id_usuario, id_producto, descripcion, calificacion) VALUES(?,?,?,?)');
+			$sentencia->execute([$fk_id_usuario, $id_producto, $descripcion, $calificacion]);
 		}
 
 

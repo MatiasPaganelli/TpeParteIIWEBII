@@ -3,33 +3,19 @@ include_once 'model/AdminModel.php';
 include_once 'model/ComentariosModel.php';
 include_once 'view/AdminView.php';
 include_once 'model/ImagenesModel.php';
+include_once 'controller/SecureController.php';
 /**
 *
 */
-class AdminController extends Controller
+class AdminController extends SecureController
 {
   protected $comentariosmodel;
-  protected $view;
-  protected $model;
-
   function __construct()
   {
+    parent::__construct();
     $this->comentariosmodel =new ComentariosModel();
     $this->model=new AdminModel();
     $this->view=new Adminview();
-
-    session_start();
-    if (isset($_SESSION['email'])) {
-      if (time() - $_SESSION['LAST_ACTIVITY'] > 10000000) {
-        header('Location: '.LOGOUT);
-        die();
-      }
-      $_SESSION['LAST_ACTIVITY'] = time();
-    }
-    else {
-      header('Location: '.LOGIN);
-      die();
-    }
   }
   function filtrarCategoria() {
     if (isset($_POST['filtrarAdmin'])) {
@@ -170,6 +156,11 @@ class AdminController extends Controller
   {
     $comentarios = $this->comentariosmodel->getComentarios();
     $this->view->mostrarComentarios($comentarios);
+  }
+  public function detalleProductoAdmin($params){
+      $id_producto = $params[0];
+      $productos =$this->model->getProducto($id_producto);
+      $this->view->detalleProducto($productos);
   }
 }
 ?>

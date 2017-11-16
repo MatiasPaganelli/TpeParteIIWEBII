@@ -5,6 +5,7 @@ include_once 'model/Model.php';
 include_once 'view/View.php';
 include_once 'controller/Controller.php';
 include_once 'controller/AdminController.php';
+include_once 'controller/UserController.php';
 include_once 'controller/CategoriasController.php';
 include_once 'controller/ProductosController.php';
 include_once 'controller/LoginController.php';

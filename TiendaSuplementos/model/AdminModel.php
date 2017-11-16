@@ -60,6 +60,12 @@ function changePermiso($tipo_usuario, $id){
   $sentencia = $this->db->prepare( "UPDATE usuario SET tipo_usuario=? WHERE id=?");
   $sentencia->execute([$tipo_usuario, $id]);
   }
+  function getProducto($id_producto)
+  {
+    $sentencia = $this->db->prepare( "SELECT * FROM producto WHERE id=?");
+    $sentencia->execute([$id_producto]);
+    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+  }
 }
 
 
