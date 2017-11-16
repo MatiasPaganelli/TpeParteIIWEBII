@@ -18,7 +18,10 @@ class UserController extends SecureController
     $this->model=new UserModel();
     $this->view=new UserView();
   }
-
+  public function categoriasUser(){
+    $categorias=$this->model->getCategorias();
+    $this->view->categoriasUser($categorias);
+  }
   function comentarios()
   {
     $productos = $this->model->getProductos();

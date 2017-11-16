@@ -11,7 +11,7 @@ class AdminView extends View
     $this->smarty->assign('categoriaFiltrada',$categoriaFiltrada);
     $this->smarty->display('templates/Admin/productosFiltradosAdmin.tpl');
   }
-  public function categoriasAdmin($categorias)
+   function categoriasAdmin($categorias)
   {
     $this->smarty->assign('titulo','Categorias');
     $this->smarty->assign('categorias',$categorias);

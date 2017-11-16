@@ -41,7 +41,9 @@
           <ul class=" nav navbar-nav navbar-right">
             <li><a href="modificarProducto">Modificar Producto</a></li>
           </ul>
-
+          <ul class=" nav navbar-nav navbar-right">
+            <li><a href="categoriasAdmin">Categorias</a></li>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="agregarProducto">Crear Producto</a></li>
           </ul>

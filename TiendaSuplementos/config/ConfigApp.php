@@ -29,7 +29,9 @@ class ConfigApp
     'comentariosUser'=>'UserController#comentarios',
     'detalleProductoAdmin'=>'AdminController#detalleProductoAdmin',
     'detalleProductoUser'=>'UserController#detalleProductoUser',
-    'detalleProducto'=>'ProductosController#detalleProducto'
+    'detalleProducto'=>'ProductosController#detalleProducto',
+    'categoriasAdmin'=>'AdminController#categoriasAdmin',
+    'categoriasUser'=>'UserController#categoriasUser'
   ];
 }
 ?>

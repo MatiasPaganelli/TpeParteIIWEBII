@@ -11,6 +11,12 @@ class UserView extends View
     $this->smarty->assign('categoriaFiltrada',$categoriaFiltrada);
     $this->smarty->display('templates/User/productosFiltradosUser.tpl');
   }
+  function categoriasUser($categorias)
+ {
+   $this->smarty->assign('titulo','Categorias');
+   $this->smarty->assign('categorias',$categorias);
+   $this->smarty->display('templates/User/categorias.tpl');
+ }
   function mostrarProductosUser($productos,$categorias)
   {
     $this->smarty->assign('categorias',$categorias);

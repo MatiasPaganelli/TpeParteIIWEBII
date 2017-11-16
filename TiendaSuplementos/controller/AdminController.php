@@ -162,5 +162,6 @@ class AdminController extends SecureController
       $productos =$this->model->getProducto($id_producto);
       $this->view->detalleProducto($productos);
   }
+
 }
 ?>

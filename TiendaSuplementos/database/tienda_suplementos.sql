@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 16-11-2017 a las 03:11:32
--- Versión del servidor: 10.1.21-MariaDB
--- Versión de PHP: 5.6.30
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 16-11-2017 a las 03:49:51
+-- Versión del servidor: 10.1.26-MariaDB
+-- Versión de PHP: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -43,8 +43,7 @@ INSERT INTO `categoria` (`id`, `nombre`, `descripcion`) VALUES
 (2, 'Creatina', 'La creatina se acumula básicamente en los músculos esqueléticos (aproximadamente un 98 %) en forma de creatina libre unida a una molécula de fosfato (PCr o fosfocreatina). La PCr sirve como fuente inmediata de energía para la contracción muscular, algo especialmente importante durante los ejercicios de breve duración, alta intensidad y carácter anaerobico. Otra función vital de la creatina es su capacidad para detener o rechazar los iones de hidrogeno, responsables de la bajada del pH del músculo y su conversión en mas acidico, un factor que contribuye a la fatiga muscular.'),
 (3, 'Pre Entreno', 'Contiene aminoácidos tales como la arginina, para estimular los bombeos musculares y la producción hormonal, así como estimulantes del SNC. Además, no tiene aporte calórico, por lo que constituye un buen producto para la fase de definición muscular.'),
 (4, 'Ganador de peso', 'Es sumamente similar a un suplemento de proteína en polvo con la diferencia de que los ganadores de peso, además de proteína, traen una cantidad bastante elevada de hidratos de carbono, y por ende, de calorías. La finalidad de esto es ayudar a las personas que se quejan de no poder subir de peso, los que muchos conocen como ectomorfos o hard gainers en inglés, puedan aumentar sus kilogramos en báscula de una manera un poco más sencilla.'),
-(6, 'deprueba', 'asd'),
-(7, 'asdasd', 'asdasdsds');
+(6, 'deprueba', 'asd');
 
 -- --------------------------------------------------------
 
@@ -196,26 +195,31 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `categoria`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT de la tabla `imagen`
 --
 ALTER TABLE `imagen`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- Restricciones para tablas volcadas
 --

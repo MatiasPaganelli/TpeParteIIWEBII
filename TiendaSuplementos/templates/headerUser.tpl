@@ -33,6 +33,9 @@
             <li><a href="indexUser">Index</a></li>
           </ul>
           <ul class=" nav navbar-nav navbar-right">
+            <li><a href="categoriasUser">Categorias</a></li>
+          </ul>
+          <ul class=" nav navbar-nav navbar-right">
             <li><a href="logout">Logout</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
